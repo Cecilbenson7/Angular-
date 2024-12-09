@@ -1,0 +1,9 @@
+<h1>Jokes from API</h1>
+<ul *ngIf="jokes.length > 0; else noJokes">
+  <li *ngFor="let joke of jokes">
+    <p>{{ joke.setup }} - {{ joke.delivery }}</p>
+  </li>
+</ul>
+<ng-template #noJokes>
+  <p>No jokes available. Please try again later.</p>
+</ng-template>

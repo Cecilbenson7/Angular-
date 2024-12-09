@@ -1,0 +1,15 @@
+<form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" required>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email" required>
+    </div>
+    <div>
+      <label for="feedback">Feedback:</label>
+      <textarea id="feedback" formControlName="feedback" required></textarea>
+    </div>
+    <button type="submit" [disabled]="!feedbackForm.valid">Submit</button>
+  </form>
